@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Items Tablet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="wrapper" style="display:none;">
+    <div id="toast" class="toast"></div>
+    <div class="tablet">
+      <div class="tablet-header">
+        <div class="title">Catálogo de Items AliadosRP</div>
+        <input id="search" type="text" placeholder="Buscar por nombre o label…" autofocus />
+        <select id="typeFilter" title="Filtrar tipo">
+          <option value="all">Todos</option>
+          <option value="item">Items</option>
+          <option value="weapon">Weapons</option>
+        </select>
+        <select id="sort" title="Ordenar">
+          <option value="label_asc">Label A→Z</option>
+          <option value="label_desc">Label Z→A</option>
+          <option value="name_asc">Name A→Z</option>
+          <option value="name_desc">Name Z→A</option>
+          <option value="weight_asc">Peso ↑</option>
+          <option value="weight_desc">Peso ↓</option>
+          <option value="type_asc">Tipo A→Z</option>
+          <option value="type_desc">Tipo Z→A</option>
+          <option value="weapon_first">Weapons primero</option>
+          <option value="item_first">Items primero</option>
+        </select>
+
+        <!-- NUEVO: filtros por peso -->
+        <input id="minWeight" type="number" placeholder="MinPeso" style="width:100px" />
+        <input id="maxWeight" type="number" placeholder="MaxPeso" style="width:100px" />
+
+        <button id="close">Cerrar</button>
+      </div>
+      <div id="list" class="items-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
